@@ -2,6 +2,16 @@ import localforage from "localforage";
 import { matchSorter } from "match-sorter";
 import sortBy from "sort-by";
 
+/* //This is the code which clears all the saved data in the localforage!
+localforage
+  .clear()
+  .then(function () {
+    console.log("All data cleared successfully!");
+  })
+  .catch(function (err) {
+    console.error("Error clearing data:", err);
+  }); */
+
 export async function getContacts(query) {
   await fakeNetwork(`getContacts:${query}`);
   let contacts = await localforage.getItem("contacts");
