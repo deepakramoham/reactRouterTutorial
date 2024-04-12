@@ -79,5 +79,6 @@ async function fakeNetwork(key) {
   fakeCache[key] = true;
   return new Promise((res) => {
     setTimeout(res, Math.random() * 800);
+    //you may increase the setTimeout time to 8000 to explicity see the effect "optimistic UI"
   });
 }
